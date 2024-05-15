@@ -1,7 +1,7 @@
 ---
 title: "古事記 | 上卷并序"
 description: "太安万侶 稗田阿禮"
-date: 2023-05-12T12:38:23Z
+date: 2023-01-11T12:38:23Z
 math: false
 hidden: false
 draft: false
