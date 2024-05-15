@@ -1,0 +1,37 @@
+{{ $pages := .outerPages }}
+{{- with .context -}}
+  {{- $age := 9000 -}}
+  {{- range $pages -}}
+    {{ $hide := or .Params.hideLevel "10" }}
+    {{- if (and (not .Draft) (lt .Site.Params.hideLevel $hide) true) -}}
+      {{- $iyear := (time.AsTime .Date).Year | int -}}
+
+      {{- if lt $iyear $age -}}
+        <div class="text-lg font-mono mb-2 md:mb-0">{{- $iyear -}}</div>
+        {{- $age = $iyear -}}
+      {{- end -}}
+      <article class="text-sprout-700 pt-1 mt-1 pl-2 rounded-sm flex w-full">
+        <a
+          href="{{ .Permalink }}"
+          class="flex w-full md:mx-2 md:px-3 flex-1 font-mono sm:text-base text-sm"
+        >
+          {{ $t := time.AsTime .Date }}
+          {{ replace ($t.Format "01-02") "-" "/" }}
+          <div
+            class="max-w-3/4 text-ellipsis overflow-x-hidden px-1 py-1/2 hover:transition-all hover:duration-300 hover:rounded-sm hover:bg-sprout-300 hover:text-white ml-5 whitespace-nowrap"
+          >
+            {{ .Title }}
+          </div>
+        </a>
+      </article>
+      <div class="flex justify-end items-end h-4 overflow-visible w-full">
+        <div
+          class="text-sm text-sprout-600 justify-self-end text-nowrap whitespace-nowrap"
+        >
+          {{ .Params.Categories }}
+        </div>
+      </div>
+    {{- end -}}
+  {{ end }}
+
+{{- end -}}

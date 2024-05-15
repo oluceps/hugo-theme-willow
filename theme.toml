@@ -1,0 +1,11 @@
+name = "willow"
+license = "MIT"
+licenselink = "https://opensource.org/license/mit"
+description = "Lightweight hugo theme made with tailwindCSS"
+tags = ["Hugo", "Tailwind CSS", "theme" ]
+features = []
+min_version = "0.88.0"
+
+[author]
+name = "oluceps"
+homepage = "https://github.com/oluceps/"

@@ -1,0 +1,23 @@
+baseURL = 'https://oluceps.github.io/hugo-theme-willow/'
+languageCode = 'en-us'
+title = '裏柳'
+theme = 'willow'
+
+[params]
+# when (.Site.Params.hideLevel >= .Params.hideLevel) hide
+hideLevel = 0
+
+[[menu.main]]
+url = "/about"
+name = "关于"
+weight = 3
+
+[[menu.main]]
+url = "/categories"
+name = "目录"
+weight = 2
+
+[[menu.main]]
+url = "/tags"
+name = "标签"
+weight = 1

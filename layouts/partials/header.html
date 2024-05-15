@@ -1,0 +1,21 @@
+<header class="mx-auto w-screen px-6 sm:px-7 xl:px-8 2xl:px-10 py-6">
+  <nav class="flex items-center justify-between flex-nowrap">
+    <div class="flex w-full h-full">
+    <a
+      href="{{ .Site.Home.Permalink }}"
+      class="flex items-center pb-0.5 text-lg font-bold max-h-2.5 px-1 bg-sprout-300 overflow-visible rounded-sm text-sprout-650"
+    >
+      {{ .Site.Title }}
+    </a>
+    </div>
+    <div id="nav-menu" class="flex justify-end items-end w-full w-auto">
+      {{- range .Site.Menus.main }}
+        <a
+          href="{{ .URL | safeURL }}"
+          class="flex max-h-3 px-0.5 pb-0.5 mx-2 justify-center items-center rounded-sm overflow-visible hover:bg-sprout-300 hover:transition-all hover:duration-300"
+          >{{ .Name }}</a
+        >
+      {{- end }}
+    </div>
+  </nav>
+</header>

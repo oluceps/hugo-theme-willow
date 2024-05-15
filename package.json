@@ -1,0 +1,25 @@
+{
+  "name": "white-bird",
+  "version": "0.4.0",
+  "description": "theme 4 hugo made with tailwindcss",
+  "main": "index.js",
+  "author": "oluceps <i@oluceps.uk>",
+  "license": "MIT",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13"
+  }
+}

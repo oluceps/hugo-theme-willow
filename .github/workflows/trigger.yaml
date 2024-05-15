@@ -1,0 +1,25 @@
+name: Trigger blog sync
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'exampleSite/**'
+      - '.github/**'
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: oluceps/whitebird
+          event-type: theme-update
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+

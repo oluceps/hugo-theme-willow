@@ -1,0 +1,7 @@
+default:
+    #!/usr/bin/env bash
+    P=$(mktemp -d)
+    cp -r ../exampleSite "$P"
+    cp -r ../../willow "$P/exampleSite/themes"
+    cd "$P/exampleSite" || exit
+    hugo server -D
