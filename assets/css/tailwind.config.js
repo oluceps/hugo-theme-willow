@@ -15,7 +15,6 @@ const hexToRgb = (hex) => {
 };
 
 module.exports = {
-  darkMode: "class",
   content: [
     "./themes/**/layouts/**/*.html",
     "./content/**/layouts/**/*.html",
@@ -79,5 +78,6 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
+    require('@tailwindcss/line-clamp'),
   ],
 };
