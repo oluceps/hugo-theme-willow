@@ -1,7 +1,11 @@
 <footer
-  class="bottom-0 w-full p-1 text-xs text-center text-slate-500 border-t border-slate-200"
+  class="bottom-0 w-full"
 >
-  <div class="flex justify-end items-end mr-4">
+  <div class="flex justify-between mr-2 mb-1 text-xs text-slate-300 place-items-center">
+    <p>{{- with .GitInfo -}}
+    {{ .CommitDate.Format "2006-01-02" }}
+    {{ end }}
+        </p>
     <p>
       Published under
       <a
