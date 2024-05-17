@@ -1,12 +1,12 @@
 <header class="mx-auto w-screen px-6 sm:px-7 xl:px-8 2xl:px-10 py-6">
   <nav class="flex items-center justify-between flex-nowrap">
     <div class="flex w-full h-full">
-    <a
-      href="{{ .Site.Home.Permalink }}"
-      class="flex items-center pb-0.5 text-lg font-bold max-h-2.5 px-1 bg-sprout-300 overflow-visible rounded-sm text-sprout-650"
-    >
-      {{ .Site.Title }}
-    </a>
+      <a
+        href="{{ .Site.Home.Permalink }}"
+        class="flex items-center pb-0.5 text-lg font-bold max-h-2.5 px-1 bg-sprout-300 overflow-visible rounded-sm text-sprout-650"
+      >
+        {{ .Site.Title }}
+      </a>
     </div>
     <div id="nav-menu" class="flex justify-end items-end w-full w-auto">
       {{- range .Site.Menus.main }}

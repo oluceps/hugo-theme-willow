@@ -84,8 +84,7 @@ $$
     **いろはにほへど**　ちりぬるを
     わがよたれぞ　つねならむ
     うゐのおくやま　けふこえて
-    あさきゆめみじ　ゑひもせず (4) 
-
+    あさきゆめみじ　ゑひもせず (4)
 
 # Syntax Highlight
 
@@ -115,4 +114,3 @@ float fast_inverse_sqrt(float number) {
     return y;
 }
 ```
-
