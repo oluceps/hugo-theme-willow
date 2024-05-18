@@ -18,9 +18,10 @@
           {{ $t := time.AsTime .Date }}
           {{ replace ($t.Format "01-02") "-" "/" }}
           <div
-            class="max-w-3/4 text-ellipsis overflow-x-hidden px-1 py-1/2 hover:transition-all hover:duration-300 hover:rounded-sm hover:bg-sprout-300 hover:text-white ml-5 whitespace-nowrap"
+            class="max-w-3/4 text-ellipsis overflow-x-hidden px-1 py-1/2 ml-5 whitespace-nowrap group transition duration-300"
           >
             {{ .Title }}
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-400 h-0.5 bg-sprout-400"></span>
           </div>
         </a>
       </article>
