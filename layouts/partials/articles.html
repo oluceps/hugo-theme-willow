@@ -7,10 +7,10 @@
       {{- $iyear := (time.AsTime .Date).Year | int -}}
 
       {{- if lt $iyear $age -}}
-        <div class="text-lg font-mono mb-2 md:mb-0">{{- $iyear -}}</div>
+        <div class="antialiased text-lg font-mono mb-2 md:mb-0">{{- $iyear -}}</div>
         {{- $age = $iyear -}}
       {{- end -}}
-      <article class="text-sprout-700 pt-1 mt-1 pl-2 rounded-sm flex w-full">
+      <article class="antialiased text-sprout-700 pt-1 mt-1 pl-2 rounded-sm flex w-full">
         <a
           href="{{ .Permalink }}"
           class="flex w-full md:mx-2 md:px-3 flex-1 font-mono sm:text-base text-sm"
