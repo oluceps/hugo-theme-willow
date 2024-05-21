@@ -31,6 +31,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: '80ch',
             h1: {
               marginTop: "0",
               fontSize: em(20, 14),
