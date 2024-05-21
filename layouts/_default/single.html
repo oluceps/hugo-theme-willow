@@ -4,18 +4,19 @@
   >
     <h1>{{ .Title }}</h1>
 
-    <div class="flex w-full items-end justify-end text-slate-500">
-      {{ with time.AsTime .Date }}
-        {{ int (div (time.ParseDuration (time.Now.Sub .)).Hours 24) }} days ago
-      {{ end }}
-    </div>
-    <br />
-
-    <div class="w-full flex items-center justify-center">
-      <i
-        class="underline underline-offset-3 decoration-sprout-500 decoration-1 text-slate-500 text-start w-full"
-        >{{ .Description }}</i
-      >
+    <div class="flex w-auto items-center justify-between text-slate-500 mb-10">
+      <div>
+        <i
+          class="bg-sprout-200 px-1 rounded-sm text-slate-550 text-start text-sm pt-0.5 font-mono"
+          >{{ .Description }}</i
+        >
+      </div>
+      <div>
+        {{ with time.AsTime .Date }}
+          {{ int (div (time.ParseDuration (time.Now.Sub .)).Hours 24) }} days
+          ago
+        {{ end }}
+      </div>
     </div>
     {{ if .Params.toc }}
       {{ partial "toc.html" . }}
