@@ -7,6 +7,7 @@ Lightweight hugo theme built with tailwindCSS, inspired by [tmaize-blog](https:/
 - [x] ~20kB Mainpage Size
 - [x] Mobile Layout Optimize
 - [x] Tiered Section Hidden
+- [x] ToC
 - [x] No Dark Mode
 - [x] No Comment
 - [x] No RSS

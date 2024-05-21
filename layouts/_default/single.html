@@ -17,7 +17,7 @@
         >{{ .Description }}</i
       >
     </div>
-    {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+    {{ if .Params.toc }}
       {{ partial "toc.html" . }}
     {{- end -}}
 
