@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article
-    class="antialiased justify-self-center mx-auto px-4 md:px-0 mb-16 prose prose-slate hover:prose-a:text-sky-500"
+    class="antialiased justify-self-center mx-auto px-4 md:px-0 mb-16 prose"
   >
     <h1>{{ .Title }}</h1>
 
@@ -13,10 +13,14 @@
 
     <div class="w-full flex items-center justify-center">
       <i
-        class="underline underline-offset-4 decoration-sprout-400 text-slate-500 text-start w-full"
+        class="underline underline-offset-3 decoration-sprout-500 decoration-1 text-slate-500 text-start w-full"
         >{{ .Description }}</i
       >
     </div>
+    {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+      {{ partial "toc.html" . }}
+    {{- end -}}
+
     {{ .Content }}
   </article>
 {{ end }}
