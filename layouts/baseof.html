@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
+  {{ partialCached "head.html" . }}
 
 
   <body
     class="flex flex-col min-h-screen bg-slate-50 text-slate-600 items-center justify-center h-auto"
   >
-    {{- partial "header.html" . -}}
+    {{- partialCached "header.html" . -}}
     <main class="flex-1 w-11/12 md:w-3/5 h-auto pt-4 sm:pt-16">
       {{- partial "articles.html" (dict "context" . "outerPages" (.Site.GetPage "posts").Pages) -}}
     </main>
-    {{- partial "footer.html" . -}}
+    {{- partialCached "footer.html" . -}}
   </body>
 </html>

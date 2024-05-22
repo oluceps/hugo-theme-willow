@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
+  {{ partialCached "head.html" . }}
 
   {{ if .Param "math" }}
     {{ partialCached "math.html" . }}
@@ -8,10 +8,10 @@
 
 
   <body class="flex flex-col min-h-screen bg-slate-50 text-slate-600">
-    {{- partial "header.html" . -}}
+    {{- partialCached "header.html" . -}}
     <main class="flex-1 grow w-screen max-w-screen-2xl pt-4 sm:pt-16">
       {{- block "main" . }}{{- end }}
     </main>
-    {{- partial "footer.html" . -}}
+    {{- partialCached "footer.html" . -}}
   </body>
 </html>
