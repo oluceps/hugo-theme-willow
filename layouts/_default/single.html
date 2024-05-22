@@ -6,10 +6,12 @@
 
     <div class="flex w-auto items-center justify-between text-slate-500 mb-10">
       <div>
-        <i
-          class="bg-sprout-200 px-1 rounded-sm text-slate-550 text-start text-sm pt-0.5 font-mono"
-          >{{ .Description }}</i
-        >
+        {{- with .Description -}}
+          <i
+            class="bg-sprout-200 px-1 rounded-sm text-slate-550 text-start text-sm pt-0.5 font-mono"
+            >{{ . }}</i
+          >
+        {{- end -}}
       </div>
       <div>
         {{ with time.AsTime .Date }}
