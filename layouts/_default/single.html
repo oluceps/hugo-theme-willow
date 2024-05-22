@@ -5,15 +5,18 @@
     <h1>{{ .Title }}</h1>
 
     <div class="flex w-auto items-center justify-between text-slate-500 mb-10">
-      <div class="flex overflow-x-clip w-3/4">
+      <div class="flex w-2/3">
         {{- with .Description -}}
           <i
-            class="whitespace-nowrap truncate bg-sprout-300 px-1 rounded-sm text-white text-start text-sm pt-0.5 font-mono"
-            >{{ . }}</i
+            class="text-pretty text-white text-start text-sm font-mono leading-loose"
+          >
+            <span class="rounded-sm bg-sprout-300 p-0.5 pt-1">
+              {{ . }}</span
+            ></i
           >
         {{- end -}}
       </div>
-      <div>
+      <div class="flex-none">
         {{ with time.AsTime .Date }}
           {{ int (div (time.ParseDuration (time.Now.Sub .)).Hours 24) }} days
           ago

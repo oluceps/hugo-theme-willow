@@ -1,13 +1,18 @@
-<header class="mx-auto w-screen px-6 xl:px-7 2xl:px-8 py-6">
+<header class="mx-auto w-screen px-4 xl:px-6 2xl:px-7 py-5">
   <nav class="flex items-center justify-between flex-nowrap">
-    <div class="flex w-full h-full">
-      <a
-        href="{{ .Site.Home.Permalink }}"
-        class="flex items-center pb-0.5 text-lg font-bold max-h-2.5 px-1 bg-sprout-300 overflow-visible rounded-sm text-sprout-650"
-      >
-        {{ .Site.Title }}
-      </a>
-    </div>
+    <a
+      href="{{ .Site.Home.Permalink }}"
+      class="flex items-center justify-center text-lg font-bold px-1 rounded-sm text-sprout-650 overflow-visible"
+    >
+      <div class="relative h-4 w-auto">
+        <div
+          class="absolute h-4 w-4 -top-1.5 -start-1.5 bg-sprout-300 rounded-sm"
+        ></div>
+        <div class="absolute leading-none text-sprout-650 text-nowrap">
+          {{ .Site.Title }}
+        </div>
+      </div>
+    </a>
     <div id="nav-menu" class="flex justify-end items-end w-full w-auto">
       {{- range .Site.Menus.main }}
         <a
